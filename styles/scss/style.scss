@@ -1,0 +1,66 @@
+@charset "utf-8";
+@use "./_reset.scss";
+
+@mixin background-size ($width: auto,$hight: auto,$background-color) {
+  width: $width;
+  height: $hight;
+  background-color: $background-color;
+}
+
+header {
+  @include size(auto, 80px, red);
+   .header-group {
+    display: flex;
+
+    nav {
+
+      ul {
+        display: flex;
+        list-style: none;
+
+         li {
+          text-decoration: none;
+          margin-left: 20px;
+         }
+      }
+     }
+    }
+  }
+}
+
+main {
+  .mainimge {
+    @include background-size(auto, 600px, blue)
+  }
+  .news {
+    @include background-size(auto, 490px, green)
+  }
+  .about {
+    @include background-size(auto, 646px, yellow)
+  }
+  .business {
+    @include background-size(auto, 1213px, orange)
+  }
+  .company {
+    @include background-size(auto, 750px, pink)
+  }
+}
+
+footer {
+  @include background-size(auto, 209px, purple)
+}
+
+/* ここからメディアクエリ */
+/*
+  max-width: 指定した値以下の幅でcssを読み込む
+*/
+@media screen and (max-width:375px) {
+  /*　画面サイズが480pxからはここを読み込む　*/
+}
+
+/*
+  min-width: 指定した値以上の幅でcssを読み込む
+*/
+@media screen and (min-width:376px) {
+  /*　画面サイズが1024pxからはここを読み込む　*/
+}

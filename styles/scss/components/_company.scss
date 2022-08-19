@@ -1,0 +1,64 @@
+
+@use "../mixin/mixin";
+
+  //コンパニー
+  .company {
+    @include mixin.dummyBlock(auto, auto, #F0F0F0);
+    margin: 0 168px;
+    display: flex;
+    align-items: center;
+
+    .company_group {
+      @include mixin.dummyBlock(567px, 640px, #FFFFFF);
+      display: flex;
+      align-items: center;
+      padding-left: 62px;
+
+
+      .company_growp_inner {
+        h3 {
+          @include mixin.mainFontsize;
+        }
+
+        span {
+          @include mixin.fontsize;
+          line-height: 86px;
+          margin-top: 10px;
+        }
+        span::after {
+          content: "";
+          width: 40px;
+          height: 1px;
+          background-color: #000;
+          display: block;
+        }
+
+        dl {
+          margin-top: 43px;
+          dt {
+            @include mixin.fontsize;
+            float: left;
+            line-height: 30px;
+          }
+          dd {
+            @include mixin.fontsize;
+            padding-left: 43px;
+            line-height: 30px;
+          }
+        }
+      }
+
+    }
+
+    .company_image {
+      object-fit: cover;
+      position: absolute;
+      //position: relative;はどこかにけないといけない？
+      right: 200px;
+      img {
+        width: 547px;
+        height: 400px;
+        object-fit: cover;
+      }
+    }
+  }

@@ -1,0 +1,81 @@
+
+@use "../mixin/mixin";
+
+header {
+
+  @include mixin.dummyBlock(auto, 80px, #F0F0F0);
+
+   .header-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .wrapper {
+      display: flex;
+      align-items: center;
+
+      h1 {
+        @include mixin.mainFontsize;
+        margin: 0;
+        margin-left: 91px;
+      }
+
+      nav {
+
+        ul {
+          display: flex;
+          list-style: none;
+
+          li {
+            @include mixin.fontsize;
+            text-decoration: none;
+            margin-left: 30px;
+          }
+        }
+      }
+    }
+
+    a {
+      @include mixin.box(200px,80px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  }
+}
+
+  /* ここからメディアクエリ */
+  /*
+    max-width: 指定した値以下の幅でcssを読み込む
+  */
+  @media screen and (max-width:375px) {
+    .header-group{
+      @include mixin.dummyBlock(auto, auto, #F0F0F0);
+
+      .header-group {
+        display: flex;
+        flex-direction: column;
+
+        .wrapper {
+        display: flex;
+        flex-direction: column;
+
+          h1 {
+            margin-left: 16px;
+            background-color: red;
+          }
+        }
+
+        a {
+          display: none;
+        }
+      }
+    }
+  }
+
+  /*
+    min-width: 指定した値以上の幅でcssを読み込む
+  */
+  @media screen and (min-width:376px) {
+  }

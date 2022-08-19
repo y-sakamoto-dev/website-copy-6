@@ -1,0 +1,83 @@
+
+@use "../mixin/mixin";
+
+  //ビジネス
+  .business {
+    @include mixin.dummyBlock(auto, auto, #F0F0F0);
+    @include mixin.mainWidth;
+    margin: 120px auto 128px auto;
+
+    h3 {
+      @include mixin.mainFontsize;
+    }
+
+    span {
+      @include mixin.fontsize;
+      line-height: 72px;
+      margin-top: 10px;
+    }
+    span::after {
+      content: "";
+      width: 40px;
+      height: 1px;
+      background-color: #000;
+      display: block;
+    }
+
+    .businessimages {
+      display: flex;
+      margin: 50px 100px 0 100px;
+
+      .business_images_group{
+        margin-right: 64px;
+        margin-top: 100px;
+
+        .business_images_web{
+          p {
+            @include mixin.fontsize;
+            margin: 0;
+            margin-bottom: 10px;
+          }
+          img {
+            @include mixin.img;
+          }
+        }
+
+        .business_images_internet{
+          p {
+            @include mixin.fontsize;
+            margin : 0;
+            margin: 50px 0 10px 0;
+          }
+          img {
+            @include mixin.img;
+          }
+        }
+      }
+
+      .business_images_group_2 {
+
+        .business_images_promotion{
+          p {
+            @include mixin.fontsize;
+            margin: 0%;
+            margin-bottom: 10px;
+          }
+          img {
+            @include mixin.img;
+          }
+        }
+
+        .business_images_social {
+          p {
+            @include mixin.fontsize;
+            margin : 0;
+            margin: 50px 0 10px 0;
+          }
+          img {
+            @include mixin.img;
+          }
+        }
+      }
+    }
+  }

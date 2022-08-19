@@ -160,53 +160,462 @@ template {
   display: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+
 header {
   width: auto;
   height: 80px;
-  background-color: red;
+  background-color: #F0F0F0;
 }
-
-.header-group {
+header .header-group {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.header-group nav ul {
+header .header-group .wrapper {
+  display: flex;
+  align-items: center;
+}
+header .header-group .wrapper h1 {
+  display: block;
+  color: #000;
+  font-size: 35px;
+  font-weight: normal;
+  letter-spacing: 0.3em;
+  margin-bottom: -10px;
+  margin: 0;
+  margin-left: 91px;
+}
+header .header-group .wrapper nav ul {
   display: flex;
   list-style: none;
 }
-.header-group nav ul li {
+header .header-group .wrapper nav ul li {
+  text-align: left;
+  font: normal normal normal 14px/35px Meiryo;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
   text-decoration: none;
+  margin-left: 30px;
+}
+header .header-group a {
+  width: 200px;
+  height: 80px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-main .mainimge {
+/* ここからメディアクエリ */
+/*
+  max-width: 指定した値以下の幅でcssを読み込む
+*/
+@media screen and (max-width: 375px) {
+  .header-group {
+    width: auto;
+    height: auto;
+    background-color: #F0F0F0;
+  }
+  .header-group .header-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .header-group .header-group .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .header-group .header-group .wrapper h1 {
+    margin-left: 16px;
+    background-color: red;
+  }
+  .header-group .header-group a {
+    display: none;
+  }
+}
+/*
+  min-width: 指定した値以上の幅でcssを読み込む
+*/
+main {
+  background-color: #F0F0F0;
+  padding-bottom: 110px;
+}
+main .mainimg {
   width: auto;
   height: 600px;
-  background-color: blue;
+  background-color: white;
 }
-main .news {
-  width: auto;
-  height: 490px;
-  background-color: green;
+main .mainimg img {
+  width: 100%;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-main .about {
-  width: auto;
-  height: 646px;
-  background-color: yellow;
+
+/* ここからメディアクエリ */
+/*
+  max-width: 指定した値以下の幅でcssを読み込む
+*/
+@media screen and (max-width: 375px) {
+  /*　画面サイズが480pxからはここを読み込む　*/
+  main {
+    padding-bottom: 0px;
+  }
 }
-main .business {
-  width: auto;
-  height: 1213px;
-  background-color: orange;
+/*
+  min-width: 指定した値以上の幅でcssを読み込む
+*/
+@media screen and (min-width: 376px) {
+  /*　画面サイズが1024pxからはここを読み込む　*/
 }
-main .company {
+.news {
   width: auto;
-  height: 750px;
-  background-color: pink;
+  height: auto;
+  background-color: #F0F0F0;
+  width: 100%;
+  max-width: 1032px;
+  padding: 0 16px;
+  margin: 0 auto;
+  margin: 120px auto 128px auto;
+}
+.news h2 {
+  display: block;
+  color: #000;
+  font-size: 35px;
+  font-weight: normal;
+  letter-spacing: 0.3em;
+  margin-bottom: -10px;
+}
+.news span {
+  text-align: left;
+  font: normal normal normal 14px/35px Meiryo;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  line-height: 72px;
+}
+.news span:after {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: #000;
+  display: block;
+}
+.news ul {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 0;
+  list-style: none;
+  padding: 0;
+}
+.news ul li:first-child {
+  border-left: 0;
+  margin-left: 0;
+  margin-left: 0;
+  padding-left: 0;
+}
+.news ul li {
+  border-left: solid 1px #000;
+  margin-left: 77px;
+  padding-left: 20px;
+}
+.news ul li .time-group time {
+  text-align: left;
+  font: normal normal normal 14px/35px Meiryo;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+.news ul li .time-group span {
+  width: 60px;
+  height: 23px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  padding: 4px;
+}
+.news ul li .time-group span:after {
+  content: none;
+}
+.news ul li p {
+  text-align: left;
+  font: normal normal normal 14px/35px Meiryo;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  margin-top: -18px;
+}
+
+.about {
+  width: auto;
+  height: auto;
+  background-color: #F0F0F0;
+  display: flex;
+}
+.about .about_image {
+  width: 760px;
+}
+.about .about_image img {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about .about-group {
+  margin: 180px 89px 0 90px;
+}
+.about .about-group h3 {
+  display: block;
+  color: #000;
+  font-size: 35px;
+  font-weight: normal;
+  letter-spacing: 0.3em;
+  margin-bottom: -10px;
+}
+.about .about-group span {
+  margin-top: 10px;
+  text-align: left;
+  font: normal normal normal 14px/35px Meiryo;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  margin-bottom: 36px;
+  line-height: 72px;
+}
+.about .about-group span::after {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: #000;
+  display: block;
+}
+.about .about-group p {
+  text-align: left;
+  font: normal normal normal 14px/35px Meiryo;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  line-height: 2.2;
+  margin-top: 50px;
+}
+
+.business {
+  width: auto;
+  height: auto;
+  background-color: #F0F0F0;
+  width: 100%;
+  max-width: 1032px;
+  padding: 0 16px;
+  margin: 0 auto;
+  margin: 120px auto 128px auto;
+}
+.business h3 {
+  display: block;
+  color: #000;
+  font-size: 35px;
+  font-weight: normal;
+  letter-spacing: 0.3em;
+  margin-bottom: -10px;
+}
+.business span {
+  text-align: left;
+  font: normal normal normal 14px/35px Meiryo;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  line-height: 72px;
+  margin-top: 10px;
+}
+.business span::after {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: #000;
+  display: block;
+}
+.business .businessimages {
+  display: flex;
+  margin: 50px 100px 0 100px;
+}
+.business .businessimages .business_images_group {
+  margin-right: 64px;
+  margin-top: 100px;
+}
+.business .businessimages .business_images_group .business_images_web p {
+  text-align: left;
+  font: normal normal normal 14px/35px Meiryo;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.business .businessimages .business_images_group .business_images_web img {
+  width: 368px;
+  height: 300px;
+}
+.business .businessimages .business_images_group .business_images_internet p {
+  text-align: left;
+  font: normal normal normal 14px/35px Meiryo;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  margin: 0;
+  margin: 50px 0 10px 0;
+}
+.business .businessimages .business_images_group .business_images_internet img {
+  width: 368px;
+  height: 300px;
+}
+.business .businessimages .business_images_group_2 .business_images_promotion p {
+  text-align: left;
+  font: normal normal normal 14px/35px Meiryo;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  margin: 0%;
+  margin-bottom: 10px;
+}
+.business .businessimages .business_images_group_2 .business_images_promotion img {
+  width: 368px;
+  height: 300px;
+}
+.business .businessimages .business_images_group_2 .business_images_social p {
+  text-align: left;
+  font: normal normal normal 14px/35px Meiryo;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  margin: 0;
+  margin: 50px 0 10px 0;
+}
+.business .businessimages .business_images_group_2 .business_images_social img {
+  width: 368px;
+  height: 300px;
+}
+
+.company {
+  width: auto;
+  height: auto;
+  background-color: #F0F0F0;
+  margin: 0 168px;
+  display: flex;
+  align-items: center;
+}
+.company .company_group {
+  width: 567px;
+  height: 640px;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  padding-left: 62px;
+}
+.company .company_group .company_growp_inner h3 {
+  display: block;
+  color: #000;
+  font-size: 35px;
+  font-weight: normal;
+  letter-spacing: 0.3em;
+  margin-bottom: -10px;
+}
+.company .company_group .company_growp_inner span {
+  text-align: left;
+  font: normal normal normal 14px/35px Meiryo;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  line-height: 86px;
+  margin-top: 10px;
+}
+.company .company_group .company_growp_inner span::after {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: #000;
+  display: block;
+}
+.company .company_group .company_growp_inner dl {
+  margin-top: 43px;
+}
+.company .company_group .company_growp_inner dl dt {
+  text-align: left;
+  font: normal normal normal 14px/35px Meiryo;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  float: left;
+  line-height: 30px;
+}
+.company .company_group .company_growp_inner dl dd {
+  text-align: left;
+  font: normal normal normal 14px/35px Meiryo;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  padding-left: 43px;
+  line-height: 30px;
+}
+.company .company_image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  right: 200px;
+}
+.company .company_image img {
+  width: 547px;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 footer {
   width: auto;
-  height: 209px;
-  background-color: purple;
+  height: auto;
+  background-color: #FFFFFF;
+  padding-bottom: 20px;
+}
+footer .footer_group {
+  margin: 0 168px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+footer .footer_group h5 {
+  display: block;
+  color: #000;
+  font-size: 35px;
+  font-weight: normal;
+  letter-spacing: 0.3em;
+  margin-bottom: -10px;
+  margin: 0;
+}
+footer .footer_group p {
+  text-align: left;
+  font: normal normal normal 14px/35px Meiryo;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  margin: 0;
+  line-height: normal;
+}
+footer span {
+  margin: 0 168px;
+  text-align: left;
+  font: normal normal normal 12px/24px Meiryo;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
 }
 
 /* ここからメディアクエリ */

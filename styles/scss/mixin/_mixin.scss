@@ -1,0 +1,45 @@
+
+@mixin dummyBlock ($width: auto,$hight: auto,$background-color:white) {
+  width: $width;
+  height: $hight;
+  background-color: $background-color;
+}
+
+@mixin mainFontsize {
+  display: block;
+  color: #000;
+  font-size: 35px;
+  font-weight: normal;
+  letter-spacing: 0.3em;
+  margin-bottom: -10px;
+}
+
+@mixin fontsize {
+  text-align: left;
+  font: normal normal normal 14px/35px Meiryo;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
+@mixin box($width: auto,$hight: auto,) {
+  width: $width;
+  height: $hight;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin mainWidth {
+  width: 100%;
+  max-width: 1032px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+@mixin img {
+  width: 368px;
+  height: 300px;
+}

@@ -1,0 +1,49 @@
+
+@use "../mixin/mixin";
+
+  //アバウト
+  .about {
+    @include mixin.dummyBlock(auto, auto, #F0F0F0);
+    display: flex;
+
+    .about_image {
+      width: 760px;
+      img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+      }
+    }
+
+    .about-group {
+      margin: 180px 89px 0 90px;
+
+      h3 {
+        @include mixin.mainFontsize;
+      }
+
+      span {
+        margin-top: 10px;
+        @include mixin.fontsize;
+        margin-bottom: 36px;
+        line-height: 72px;
+      }
+
+      span::after {
+        content: "";
+        width: 40px;
+        height: 1px;
+        background-color: #000;
+        display: block;
+      }
+
+
+      p {
+      @include mixin.fontsize;
+      line-height: 2.2;
+      margin-top: 50px;
+      }
+
+    }
+
+  }

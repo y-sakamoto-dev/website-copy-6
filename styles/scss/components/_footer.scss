@@ -1,0 +1,51 @@
+
+@use "../mixin/mixin";
+
+footer {
+  @include mixin.dummyBlock(auto, auto, #FFFFFF);
+  padding-bottom: 20px;
+
+  .footer_group {
+    margin: 0 168px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+
+    h5 {
+      @include mixin.mainFontsize;
+      margin: 0;
+    }
+
+    p {
+      @include mixin.fontsize;
+      margin: 0;
+      line-height: normal
+    }
+  }
+
+  span {
+    margin: 0 168px;
+    text-align: left;
+    font: normal normal normal 12px/24px Meiryo;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+  }
+}
+
+
+/* ここからメディアクエリ */
+/*
+  max-width: 指定した値以下の幅でcssを読み込む
+*/
+@media screen and (max-width:375px) {
+  /*　画面サイズが480pxからはここを読み込む　*/
+}
+
+/*
+  min-width: 指定した値以上の幅でcssを読み込む
+*/
+@media screen and (min-width:376px) {
+  /*　画面サイズが1024pxからはここを読み込む　*/
+}

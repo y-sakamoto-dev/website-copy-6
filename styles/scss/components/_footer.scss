@@ -36,16 +36,21 @@ footer {
 
 
 /* ここからメディアクエリ */
-/*
-  max-width: 指定した値以下の幅でcssを読み込む
-*/
-@media screen and (max-width:375px) {
-  /*　画面サイズが480pxからはここを読み込む　*/
-}
+  @media screen and (max-width:375px) {
+    footer {
+      .footer_group {
+        flex-direction: column;
+        align-items: baseline;
+        margin: 0;
+        padding-left: 16px;
 
-/*
-  min-width: 指定した値以上の幅でcssを読み込む
-*/
-@media screen and (min-width:376px) {
-  /*　画面サイズが1024pxからはここを読み込む　*/
-}
+        p {
+          margin-top: 10px;
+        }
+      }
+
+      span {
+        margin: 0 0 0 16px;
+      }
+    }
+  }

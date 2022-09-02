@@ -19,19 +19,11 @@ main {
 /* ここからメディアクエリ */
 /*
   max-width: 指定した値以下の幅でcssを読み込む
-*/
-@media screen and (max-width:375px) {
-  /*　画面サイズが480pxからはここを読み込む　*/
+  */
+  @media screen and (max-width:375px) {
+    /*　画面サイズが480pxからはここを読み込む　*/
 
-main {
-  padding-bottom: 0px;
-}
-}
-
-/*
-  min-width: 指定した値以上の幅でcssを読み込む
-*/
-@media screen and (min-width:376px) {
-  /*　画面サイズが1024pxからはここを読み込む　*/
-}
-
+  main {
+    padding-bottom: 0;
+  }
+  }

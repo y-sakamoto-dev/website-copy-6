@@ -33,13 +33,19 @@
 }
 
 @mixin mainWidth {
-  width: 100%;
+  width: auto;
   max-width: 1032px;
   padding: 0 16px;
   margin: 0 auto;
 }
 
 @mixin img {
-  width: 368px;
+  width: 100%;
   height: 300px;
+  object-fit: cover;
+}
+
+@mixin imgMeddia {
+  width: 100%;
+  height: 232px;
 }

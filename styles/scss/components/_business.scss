@@ -2,7 +2,7 @@
 @use "../mixin/mixin";
 
   //ビジネス
-  .business {
+  #business {
     @include mixin.dummyBlock(auto, auto, #F0F0F0);
     @include mixin.mainWidth;
     margin: 120px auto 128px auto;
@@ -81,3 +81,44 @@
       }
     }
   }
+
+/* ここからメディアクエリ */
+@media screen and (max-width:375px) {
+  #business {
+    margin: 80px auto auto auto;
+    padding: 0 16px 0 16px;
+    width: auto;
+
+    .businessimages {
+      flex-direction: column;
+      margin: 50px 0 0 0;
+
+      .business_images_group {
+        margin: 0;
+        .business_images_web {
+          img {
+            @include mixin.imgMeddia
+          }
+        }
+        .business_images_internet {
+          img {
+            @include mixin.imgMeddia
+          }
+        }
+      }
+
+      .business_images_group_2 {
+        .business_images_promotion {
+          img {
+            @include mixin.imgMeddia
+          }
+        }
+        .business_images_social {
+          img {
+            @include mixin.imgMeddia
+          }
+        }
+      }
+    }
+  }
+}

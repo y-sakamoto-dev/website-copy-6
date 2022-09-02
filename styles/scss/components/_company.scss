@@ -2,7 +2,7 @@
 @use "../mixin/mixin";
 
   //コンパニー
-  .company {
+  #company {
     @include mixin.dummyBlock(auto, auto, #F0F0F0);
     margin: 0 168px;
     display: flex;
@@ -51,14 +51,52 @@
     }
 
     .company_image {
-      object-fit: cover;
       position: absolute;
-      //position: relative;はどこかにけないといけない？
+      //position: relative;はどこかにかけないといけない？
       right: 200px;
+      width: 40%;
       img {
-        width: 547px;
+        width: 100%;
         height: 400px;
         object-fit: cover;
+      }
+    }
+  }
+
+/* ここからメディアクエリ */
+  @media screen and (max-width:375px) {
+    #company {
+      width: auto;
+      position: none;
+      flex-direction: column;
+      margin: 80px 16px 0 16px;
+
+      .company_group {
+        width: 100%;
+        height: auto;
+        padding: 40px 20px ;
+        margin-bottom: 20px;
+
+        .company_growp_inner {
+          dl {
+            dt {
+              float: none;
+            }
+            dd {
+              padding: 0;
+              margin-left: 18px;
+            }
+          }
+        }
+      }
+
+      .company_image {
+        position: static;
+        width: auto;
+
+        img {
+          width: 100%;
+        }
       }
     }
   }

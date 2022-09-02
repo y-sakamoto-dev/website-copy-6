@@ -2,12 +2,12 @@
 @use "../mixin/mixin";
 
   //アバウト
-  .about {
+  #about {
     @include mixin.dummyBlock(auto, auto, #F0F0F0);
     display: flex;
 
     .about_image {
-      width: 760px;
+      width: 50%;
       img {
         width: 100%;
         height: 400px;
@@ -46,4 +46,24 @@
 
     }
 
+  }
+
+/* ここからメディアクエリ */
+  @media screen and (max-width:375px) {
+
+    #about {
+      flex-direction: column;
+
+      .about_image {
+        width: auto;
+        img {
+          width: 100%;
+        }
+      }
+
+      .about-group {
+        margin: 30px 23px 0 16px;
+      }
+
+    }
   }

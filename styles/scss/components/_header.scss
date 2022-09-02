@@ -2,17 +2,18 @@
 @use "../mixin/mixin";
 
 header {
-
   @include mixin.dummyBlock(auto, 80px, #F0F0F0);
 
    .header-group {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #F0F0F0;
 
     .wrapper {
       display: flex;
       align-items: center;
+      width: 100%;
 
       h1 {
         @include mixin.mainFontsize;
@@ -27,14 +28,18 @@ header {
           list-style: none;
 
           li {
-            @include mixin.fontsize;
-            text-decoration: none;
             margin-left: 30px;
+
+            a {
+              @include mixin.fontsize;
+              text-decoration: none;
+            }
           }
         }
       }
     }
 
+  .materials{
     a {
       @include mixin.box(200px,80px);
       display: flex;
@@ -42,40 +47,41 @@ header {
       align-items: center;
     }
 
+    }
   }
 }
 
   /* ここからメディアクエリ */
-  /*
-    max-width: 指定した値以下の幅でcssを読み込む
-  */
   @media screen and (max-width:375px) {
-    .header-group{
-      @include mixin.dummyBlock(auto, auto, #F0F0F0);
+    header {
+      height: auto;
+      .header-group{
+          .wrapper {
+          display: block;
+          flex-direction: column;
+          margin: 16px auto 15px 16px;
 
-      .header-group {
-        display: flex;
-        flex-direction: column;
+            h1 {
+              margin-left: 0;
+            }
 
-        .wrapper {
-        display: flex;
-        flex-direction: column;
+            nav {
+              ul {
+                padding: 0;
+                margin: 0;
 
-          h1 {
-            margin-left: 16px;
-            background-color: red;
+                li:first-child{
+                  margin: 0;
+                }
+              }
+            }
           }
-        }
 
+      .materials {
         a {
           display: none;
         }
       }
+      }
     }
-  }
-
-  /*
-    min-width: 指定した値以上の幅でcssを読み込む
-  */
-  @media screen and (min-width:376px) {
   }

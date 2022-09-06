@@ -5,6 +5,15 @@
   background-color: $background-color;
 }
 
+//プロパティの幅
+@mixin mainWidth {
+  width: auto;
+  max-width: 1032px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+//見出し文字サイズ　（h１...）
 @mixin mainFontsize {
   display: block;
   color: #000;
@@ -14,6 +23,7 @@
   margin-bottom: -10px;
 }
 
+//文字サイズ
 @mixin fontsize {
   text-align: left;
   font: normal normal normal 14px/35px Meiryo;
@@ -22,6 +32,7 @@
   opacity: 1;
 }
 
+//🔳の囲　（header、newsに使用）
 @mixin box($width: auto,$hight: auto,) {
   width: $width;
   height: $hight;
@@ -32,19 +43,14 @@
   justify-content: center;
 }
 
-@mixin mainWidth {
-  width: auto;
-  max-width: 1032px;
-  padding: 0 16px;
-  margin: 0 auto;
-}
-
+//画像
 @mixin img {
   width: 100%;
   height: 300px;
   object-fit: cover;
 }
 
+//メディアクエリの画像
 @mixin imgMeddia {
   width: 100%;
   height: 232px;

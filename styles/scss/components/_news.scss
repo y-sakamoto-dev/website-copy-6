@@ -5,9 +5,11 @@
     @include mixin.dummyBlock(auto, auto, #F0F0F0);
     @include mixin.mainWidth;
     margin: 120px auto 128px auto;
+
     h2 {
       @include mixin.mainFontsize;
     }
+
     span {
       @include mixin.fontsize;
       line-height: 72px;
@@ -19,6 +21,7 @@
       background-color: #000;
       display: block;
     }
+
     ul {
       display: flex;
       margin-top: 30px;
@@ -36,19 +39,23 @@
         border-left: solid 1px #000;
         margin-left: 77px;
         padding-left: 20px;
+
         .time-group {
           time{
             @include mixin.fontsize;
           }
+
           span {
             @include mixin.box(60px,23px);
             font-size: 12px;
             padding: 4px;
           }
+
           span:after {
             content: none
           }
         }
+
       p {
       @include mixin.fontsize;
       margin-top: -18px;

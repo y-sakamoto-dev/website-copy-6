@@ -38,6 +38,7 @@
             margin: 0;
             margin-bottom: 10px;
           }
+
           img {
             @include mixin.img;
           }
@@ -49,6 +50,7 @@
             margin : 0;
             margin: 50px 0 10px 0;
           }
+
           img {
             @include mixin.img;
           }
@@ -63,6 +65,7 @@
             margin: 0%;
             margin-bottom: 10px;
           }
+
           img {
             @include mixin.img;
           }
@@ -74,6 +77,7 @@
             margin : 0;
             margin: 50px 0 10px 0;
           }
+
           img {
             @include mixin.img;
           }
@@ -95,6 +99,7 @@
 
       .business_images_group {
         margin: 0;
+
         .business_images_web {
           img {
             @include mixin.imgMeddia
@@ -113,6 +118,7 @@
             @include mixin.imgMeddia
           }
         }
+
         .business_images_social {
           img {
             @include mixin.imgMeddia

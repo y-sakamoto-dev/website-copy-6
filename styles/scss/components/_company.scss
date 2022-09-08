@@ -3,16 +3,21 @@
 
   //コンパニー
   #company {
-    @include mixin.dummyBlock(auto, auto, #F0F0F0);
-    margin: 0 168px;
+    @include mixin.dummyBlock(100%, 600px, #F0F0F0);
+    max-width: 1032px;
+    margin: 0 auto; // marginで真ん中寄せにしたいなら「margin: 0 auto;」でOK
     display: flex;
     align-items: center;
+    position: relative;
 
     .company_group {
-      @include mixin.dummyBlock(567px, 640px, #FFFFFF);
+      @include mixin.dummyBlock(55%, auto, #FFFFFF);
       display: flex;
       align-items: center;
-      padding-left: 62px;
+      // padding-left: 62px; 「position: absolute」がかかっている場合はpaddingで位置調整せず、top、bottom、left、rightのいずれかで調整する。
+      position: absolute;
+      left: 0px;
+      padding: 100px 8% 100px 6%;
 
 
       .company_growp_inner {
@@ -55,8 +60,9 @@
     .company_image {
       position: absolute;
       //position: relative;はどこかにかけないといけない？
-      right: 200px;
-      width: 40%;
+      //↑ position: relative;は親要素にかけてあげる！
+      right: 0;
+      width: 53%; // デザインでは53%にの幅になっていたので修正
 
       img {
         width: 100%;
@@ -67,18 +73,20 @@
   }
 
 /* ここからメディアクエリ */
-  @media screen and (max-width:375px) {
+  @media screen and (max-width:900px) {
     #company {
       width: auto;
-      position: none;
+      position: static;
       flex-direction: column;
       margin: 80px 16px 0 16px;
+      height: auto;
 
       .company_group {
         width: 100%;
         height: auto;
         padding: 40px 20px ;
         margin-bottom: 20px;
+        position: static;
 
         .company_growp_inner {
           dl {

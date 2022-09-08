@@ -219,7 +219,7 @@ header .header-group .materials a {
 }
 
 /* ここからメディアクエリ */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 900px) {
   header {
     height: auto;
   }
@@ -262,7 +262,7 @@ main .mainimg img {
 /*
   max-width: 指定した値以下の幅でcssを読み込む
   */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 900px) {
   /*　画面サイズが480pxからはここを読み込む　*/
   main {
     padding-bottom: 0;
@@ -350,7 +350,7 @@ main .mainimg img {
 }
 
 /* ここからメディアクエリ */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 900px) {
   #news {
     margin: 80px auto 90px auto;
   }
@@ -417,7 +417,7 @@ main .mainimg img {
 }
 
 /* ここからメディアクエリ */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 900px) {
   #about {
     flex-direction: column;
   }
@@ -535,7 +535,7 @@ main .mainimg img {
 }
 
 /* ここからメディアクエリ */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 900px) {
   #business {
     margin: 80px auto auto auto;
     padding: 0 16px 0 16px;
@@ -714,7 +714,7 @@ footer span {
 }
 
 /* ここからメディアクエリ */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 900px) {
   footer .footer_group {
     flex-direction: column;
     align-items: baseline;

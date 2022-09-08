@@ -6,11 +6,11 @@ main {
   padding-bottom: 110px;
 
   .mainimg {
-    @include mixin.dummyBlock(auto, 600px, );
+    @include mixin.dummyBlock(auto, calc(100vh - 80px), );
 
     img {
       width: 100%;
-      height: 600px;
+      height: calc(100vh - 80px);
       object-fit: cover;
     }
   }

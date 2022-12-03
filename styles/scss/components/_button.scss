@@ -1,0 +1,8 @@
+// ボタンの汎用的なファイル
+
+
+@use "../mixin/mixin";
+
+.button {
+  @include mixin.buttonStyles;
+}

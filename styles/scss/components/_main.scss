@@ -1,0 +1,29 @@
+
+@use "../mixin/mixin";
+
+main {
+  background-color: #F0F0F0;
+  padding-bottom: 110px;
+
+  .mainimg {
+    @include mixin.dummyBlock(auto, calc(100vh - 80px), );
+
+    img {
+      width: 100%;
+      height: calc(100vh - 80px);
+      object-fit: cover;
+    }
+  }
+}
+
+/* ここからメディアクエリ */
+/*
+  max-width: 指定した値以下の幅でcssを読み込む
+  */
+  @media screen and (max-width:900px) {
+    /*　画面サイズが480pxからはここを読み込む　*/
+
+  main {
+    padding-bottom: 0;
+  }
+  }

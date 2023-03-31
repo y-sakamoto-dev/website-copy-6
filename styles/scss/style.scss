@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+// reset
+@use "./_reset.scss";
+
+// mixin
+@use "./mixin/_mixin.scss";
+
+// components
+@use "./components/header";
+@use "./components/main";
+@use "./components/news";
+@use "./components/about";
+@use "./components/business";
+@use "./components/company";
+@use "./components/footer";
